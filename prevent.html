@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const onFromSubmit = (evt) => {
+            evt.preventDefault()
+            let phone = document.querySelector("#id_phone").value;
+            if (phone.length < 9) {
+                alert("phone number is too short")
+            }
+            else {
+                document.querySelector("#id_form").submit()
+            }
+
+        }
+
+        window.onload = () => {
+            window.history.forward(1);
+            //document.attachEvent("onkeydown", my_onkeydown_handler);
+            
+        }
+        
+
+
+    </script>
+
+    <!-- תבדוק בזמן ההפסקה איך מאזינםי ללחיצה על הרפרש
+    ותציגו למשתמש הודעה האם הוא בטוח במה שהוא עושה -->
+</head>
+
+<body>
+    <div>
+        <form id="id_form" action="thanku.html" onsubmit="onFromSubmit(event)">
+            <label for="id_phone">Phone:</label>
+            <input id="id_phone" type="tel" name="txt_phone">
+            <br>
+            <button>order</button>
+        </form>
+    </div>
+</body>
+
+</html>

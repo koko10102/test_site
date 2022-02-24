@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            declareViewEvents()
+        }
+
+
+        
+        const declareViewEvents = () => {
+            // true -> גורם שהאירוע יתחיל מהקונטיינר ולא מהכפתור
+            document.querySelector(".container").addEventListener("click",() =>{
+                alert("cont")
+            },true)
+
+            document.querySelector(".box").addEventListener("click",() =>{
+                alert("box")
+            })
+
+            document.querySelector("#click_btn").addEventListener("click",(event) =>{
+                // בשביל למנוע את הבאבל
+                //event.stopPropagation()
+                alert("click_btn")
+            })
+        }
+
+    </script>
+    <style>
+        .container{
+            max-width:1140px;
+    width:100%;
+    margin:0 auto;
+    background: green;
+        }
+
+        .box{
+            width:300px;
+            height: 200px;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bubble and capture</h1>
+        <div class="box">
+            <button id="click_btn">click me</button>
+        </div>
+    </div>
+</body>
+</html>

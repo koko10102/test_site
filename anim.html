@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: silver;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container{
+            max-width:800px;
+            background-color: white;
+            margin: 0 auto;
+            padding:16px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box1{
+            width:200px;
+            height: 150px;
+            background: orange;
+            transition: 2s;
+        }
+
+        .box1:hover{
+            /* width:600px; */
+            /* height: 150px; */
+            /* transform: scale(1.5,1.5); */
+            /* transform: translate(15px,5px); */
+            transform: rotate(180deg) scale(1.5,1.5);
+            background: blue;
+        }
+
+
+        img{
+            transition: 0.8s;
+            filter: blur(5px);
+        }
+
+        img:hover{
+            /* transform: rotate(360deg) scale(1.5,1.5); */
+            filter: blur(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            this is box
+        </div>
+        <div class="box1">
+            this is box
+        </div>
+        <div class="box1">
+            this is box
+        </div>
+        <img src="_images/pic1.jpeg" width="300" >
+        <img src="_images/pic2.jpeg" width="300" >
+    </div>
+</body>
+
+</html>
